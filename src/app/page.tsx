@@ -40,7 +40,7 @@ export default function Home() {
       {/* Teaser des features */}
       <div className="flex flex-wrap justify-center gap-3 mt-2">
         <span className="rounded-full bg-rose-100 px-4 py-1 text-sm font-medium text-rose-700 shadow">
-          +100 APIs
+          +500 APIs
         </span>
         <span className="rounded-full bg-blue-100 px-4 py-1 text-sm font-medium text-blue-700 shadow">
           Playground interactif
