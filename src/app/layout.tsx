@@ -4,6 +4,7 @@ import Header2 from '../components/mvpblocks/header-2';
 import Footer4Col from '../components/mvpblocks/footer-4col';
 import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -34,6 +35,7 @@ export default function RootLayout({
         </main>
         <Footer4Col />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
