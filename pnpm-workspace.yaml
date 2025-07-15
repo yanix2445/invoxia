@@ -1,5 +1,6 @@
 onlyBuiltDependencies:
   - '@prisma/client'
   - '@tailwindcss/oxide'
+  - '@vercel/speed-insights'
   - sharp
   - unrs-resolver
