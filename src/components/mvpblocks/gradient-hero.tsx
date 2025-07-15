@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronRight, Github } from 'lucide-react';
 import { Button } from '../ui/button';
+import Image from 'next/image';
 
 export default function GradientHero() {
   return (
@@ -109,10 +110,12 @@ export default function GradientHero() {
                 </div>
               </div>
               <div className="relative">
-                <img
+                <Image
                   src="https://i.postimg.cc/0yk8Vz7t/dashboard.webp"
                   alt="Dashboard Preview"
                   className="w-full"
+                  width={1000}
+                  height={1000}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0"></div>
               </div>
