@@ -12,11 +12,11 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { name: 'Home', href: '/' },
-  { name: 'APIs', href: '/apis' },
-  { name: 'Playground', href: '/playground' },
-  { name: 'Tarifs', href: '/tarifs' },
-  { name: 'Documentation', href: '/documentation' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'APIs', href: '/' },
+  { name: 'Playground', href: '/' },
+  { name: 'Tarifs', href: '/' },
+  { name: 'Documentation', href: '/' },
+  { name: 'Contact', href: '/' },
 ];
 
 export default function Header2() {
