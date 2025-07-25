@@ -129,9 +129,9 @@ export default function Footer4Col() {
               <ul className="mt-8 space-y-4 text-sm">
                 {aboutLinks.map(({ text, href }) => (
                   <li key={text}>
-                    <a className="text-secondary-foreground/70 transition" href={href}>
+                    <Link className="text-secondary-foreground/70 transition" href={href} >
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -142,9 +142,9 @@ export default function Footer4Col() {
               <ul className="mt-8 space-y-4 text-sm">
                 {serviceLinks.map(({ text, href }) => (
                   <li key={text}>
-                    <a className="text-secondary-foreground/70 transition" href={href}>
+                    <Link className="text-secondary-foreground/70 transition" href={href}>
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -155,7 +155,7 @@ export default function Footer4Col() {
               <ul className="mt-8 space-y-4 text-sm">
                 {helpfulLinks.map(({ text, href, hasIndicator }) => (
                   <li key={text}>
-                    <a
+                    <Link
                       href={href}
                       className={`${
                         hasIndicator
@@ -170,7 +170,7 @@ export default function Footer4Col() {
                           <span className="relative inline-flex size-2 rounded-full bg-primary" />
                         </span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -181,7 +181,7 @@ export default function Footer4Col() {
               <ul className="mt-8 space-y-4 text-sm">
                 {contactInfo.map(({ icon: Icon, text, isAddress }) => (
                   <li key={text}>
-                    <a
+                    <Link
                       className="flex items-center justify-center gap-1.5 sm:justify-start"
                       href="/"
                     >
@@ -195,7 +195,7 @@ export default function Footer4Col() {
                           {text}
                         </span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
