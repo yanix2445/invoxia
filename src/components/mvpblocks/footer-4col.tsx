@@ -7,42 +7,43 @@ import {
   MapPin,
   Phone,
   Twitter,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 const data = {
-  facebookLink: "https://facebook.com/mvpblocks",
-  instaLink: "https://instagram.com/mvpblocks",
-  twitterLink: "https://twitter.com/mvpblocks",
-  githubLink: "https://github.com/mvpblocks",
-  dribbbleLink: "https://dribbble.com/mvpblocks",
+  facebookLink: "/",
+  instaLink: "/",
+  twitterLink: "/",
+  githubLink: "/",
+  dribbbleLink: "/",
   services: {
-    webdev: "/web-development",
-    webdesign: "/web-design",
-    marketing: "/marketing",
-    googleads: "/google-ads",
+    webdev: "/",
+    webdesign: "/",
+    marketing: "/",
+    googleads: "/",
   },
   about: {
-    history: "/company-history",
-    team: "/meet-the-team",
-    handbook: "/employee-handbook",
-    careers: "/careers",
+    history: "/",
+    team: "/",
+    handbook: "/",
+    careers: "/",
   },
   help: {
-    faqs: "/faqs",
-    support: "/support",
-    livechat: "/live-chat",
+    faqs: "/",
+    support: "/",
+    livechat: "/",
   },
   contact: {
-    email: "hello@mvpblocks.com",
-    phone: "+91 8637373116",
-    address: "Kolkata, West Bengal, India",
+    email: "contact@invoxia.com",
+    phone: "+33 0603059829",
+    address: "Paris, Île-de-France, France",
   },
   company: {
-    name: "Mvpblocks",
+    name: "Invoxia",
     description:
-      "Building beautiful and functional web experiences with modern technologies. We help startups and businesses create their digital presence.",
+      "Invoxia, le hub mondial d’APIs : testez, connectez et innovez grâce à une interface intuitive et des outils d’intelligence artificielle, pour explorer et intégrer facilement toutes vos APIs.",
     logo: "/logo.webp",
   },
 };
@@ -88,6 +89,7 @@ export default function Footer4Col() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="flex justify-center gap-2 text-primary sm:justify-start">
+              {/* 
               <Image
                 src={data.company.logo || "/placeholder.svg"}
                 alt="logo"
@@ -95,6 +97,13 @@ export default function Footer4Col() {
                 width={1000}
                 height={1000}
               />
+              */}
+              <div className="relative">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 via-rose-600 to-rose-700 shadow-lg">
+                    <Zap className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="absolute -right-1 -top-1 h-3 w-3 animate-pulse rounded-full bg-green-400"></div>
+                </div>
               <span className="text-2xl font-semibold">{data.company.name}</span>
             </div>
 
@@ -120,9 +129,9 @@ export default function Footer4Col() {
               <ul className="mt-8 space-y-4 text-sm">
                 {aboutLinks.map(({ text, href }) => (
                   <li key={text}>
-                    <a className="text-secondary-foreground/70 transition" href={href}>
+                    <Link className="text-secondary-foreground/70 transition" href={href} >
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -133,9 +142,9 @@ export default function Footer4Col() {
               <ul className="mt-8 space-y-4 text-sm">
                 {serviceLinks.map(({ text, href }) => (
                   <li key={text}>
-                    <a className="text-secondary-foreground/70 transition" href={href}>
+                    <Link className="text-secondary-foreground/70 transition" href={href}>
                       {text}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -146,7 +155,7 @@ export default function Footer4Col() {
               <ul className="mt-8 space-y-4 text-sm">
                 {helpfulLinks.map(({ text, href, hasIndicator }) => (
                   <li key={text}>
-                    <a
+                    <Link
                       href={href}
                       className={`${
                         hasIndicator
@@ -161,7 +170,7 @@ export default function Footer4Col() {
                           <span className="relative inline-flex size-2 rounded-full bg-primary" />
                         </span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -172,9 +181,9 @@ export default function Footer4Col() {
               <ul className="mt-8 space-y-4 text-sm">
                 {contactInfo.map(({ icon: Icon, text, isAddress }) => (
                   <li key={text}>
-                    <a
+                    <Link
                       className="flex items-center justify-center gap-1.5 sm:justify-start"
-                      href="#"
+                      href="/"
                     >
                       <Icon className="size-5 shrink-0 text-primary shadow-sm" />
                       {isAddress ? (
@@ -186,7 +195,7 @@ export default function Footer4Col() {
                           {text}
                         </span>
                       )}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
